@@ -55,6 +55,95 @@
   background: #B58A48;
 }
 
+/* Luxury animations & keyframes */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(8px) rotate(-1.5deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes leafSway {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2.5s infinite;
+}
+
+.animate-gold-shimmer {
+  background: linear-gradient(
+    110deg,
+    #B58A48 0%,
+    #D4AF37 40%,
+    #FFF4D2 50%,
+    #D4AF37 60%,
+    #B58A48 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite linear;
+}
+
+.animate-float {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: floatReverse 4.5s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.animate-leaf-sway {
+  transform-origin: top left;
+  animation: leafSway 6s ease-in-out infinite;
+}
+
 /* Utilities for luxury borders, shadows & animations */
 .ayur-card-shadow {
   box-shadow: 0 4px 20px -2px rgba(21, 61, 42, 0.05), 0 2px 6px -1px rgba(21, 61, 42, 0.02);
@@ -62,12 +151,4 @@
 
 .ayur-card-shadow-hover {
   box-shadow: 0 16px 36px -4px rgba(21, 61, 42, 0.12), 0 6px 12px -2px rgba(21, 61, 42, 0.04);
-}
-
-.ayur-gold-gradient {
-  background: linear-gradient(135deg, #B58A48 0%, #D4AF37 50%, #B58A48 100%);
-}
-
-.ayur-banner-overlay {
-  background: linear-gradient(90deg, rgba(250, 244, 234, 0.85) 0%, rgba(250, 244, 234, 0.4) 40%, rgba(250, 244, 234, 0) 100%);
 }

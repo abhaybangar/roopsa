@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import { motion } from "motion/react";
 import { useApp } from "@/context/AppContext";
 
 export default function ContactBanner() {
@@ -15,15 +16,21 @@ export default function ContactBanner() {
       className="w-full bg-[#FAF4EA] py-10 sm:py-16"
     >
       <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10">
-        <div className="bg-[#FAF4EA] rounded-2xl overflow-hidden border border-[#E6DCBA] grid grid-cols-1 md:grid-cols-2 shadow-sm">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="bg-[#FAF4EA] rounded-2xl overflow-hidden border border-[#E6DCBA] grid grid-cols-1 md:grid-cols-2 shadow-sm hover:shadow-md transition-shadow group"
+        >
           {/* Left Side: Photo of woman holding rose */}
-          <div className="relative min-h-[280px] sm:min-h-[380px] w-full bg-stone-100">
+          <div className="relative min-h-[280px] sm:min-h-[380px] w-full bg-stone-100 overflow-hidden">
             <Image
               src="/contact-rose.png"
               alt="Ayurvedic beauty consultation and customer care"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover object-center"
+              className="object-cover object-center transition-transform duration-1000 ease-out group-hover:scale-104"
             />
           </div>
 
@@ -46,16 +53,18 @@ export default function ContactBanner() {
             </p>
 
             <div>
-              <button
+              <motion.button
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.96 }}
                 onClick={() => setIsContactOpen(true)}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#153D2A] hover:bg-[#102D20] text-white text-xs sm:text-sm font-semibold transition-all hover:gap-3 active:scale-95 shadow-sm"
+                className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-[#153D2A] hover:bg-[#102D20] text-white text-xs sm:text-sm font-semibold transition-all hover:gap-3.5 shadow-sm active:scale-95 group/btn"
               >
                 <span>Contact Us</span>
-                <ArrowRight className="w-4 h-4" />
-              </button>
+                <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+              </motion.button>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
