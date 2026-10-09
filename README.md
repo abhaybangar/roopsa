@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Roopasa Ayurveda
+
+A luxury, full-width Ayurvedic skincare and wellness ecommerce store built with Next.js App Router, Tailwind CSS, and Motion.
+
+## Features
+- **Hero Carousel**: Edge-to-edge responsive slideshow with authentic brand banners and autoplay.
+- **Best Sellers**: 4-card desktop grid and 2-column mobile layout with quick view and wishlist controls.
+- **Festive Care Banner**: Wide promotional campaign strip with interactive navigation.
+- **The Goodness Inside**: 6 natural Ayurvedic ingredient highlights (Aloe Vera, Rose Water, Saffron, Honey, Sea Buckthorn, Turmeric).
+- **Explore Our Ayurvedic Range**: Full product catalogue with live category filters and sorting.
+- **Customer Reviews**: Testimonial carousel with customer avatars and star ratings.
+- **Skincare Inquiries & Contact**: Consultation split card and modal with client-side form validation.
+- **Cart Drawer & Quick View**: Dynamic cart slide-over with free shipping progress bar and modal product preview.
+- **Fully Responsive**: Optimized for mobile (including 390px viewports) up to wide desktop displays.
+
+## Tech Stack
+- Next.js (App Router)
+- React 19
+- Tailwind CSS
+- Lucide React
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The project is configured for one-click deployment on [Vercel](https://vercel.com):
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push your repository to GitHub.
+2. Import the project in your Vercel Dashboard.
+3. Deploy!
